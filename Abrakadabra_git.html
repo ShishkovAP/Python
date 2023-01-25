@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+def first(string_array):
+    return string_array[2]
+
+
+def second(string_array, string_length):
+    return string_array[string_length - 2]
+
+
+def third(string_array):
+    return string_array[0] + string_array[1] + string_array[2] + string_array[3] + string_array[4]
+
+
+def fourth(string_array, string_length):
+    return_value = ''
+    i = 0
+    while i < (string_length - 2):
+        return_value = return_value + string_array[i]
+        i += 1
+
+    return return_value
+
+
+def fifth(string_array, string_length):
+    return_value = ''
+    i = 0
+    while i < string_length:
+        if i % 2 != 1:
+            return_value = return_value + string_array[i]
+
+        i += 1
+    return return_value
+
+
+def sixth(string_array, string_length):
+    return_value = ''
+    i = 0
+    while i < string_length:
+        if i % 2 == 1:
+            return_value = return_value + string_array[i]
+
+        i += 1
+    return return_value
+
+
+def seventh(string):
+    return "".join(reversed(string))
+
+
+def eigth(string, string_length):
+    reserved_string = string[::-1]
+    string_array = list(reserved_string)
+
+    return fifth(string_array, string_length)
+
+
+def result_output(string):
+    string_length = len(string)
+    string_array = list(string)
+
+    string_first = first(string_array)
+    print(string_first)
+
+    string_second = second(string_array, string_length)
+    print(string_second)
+
+    string_third = third(string_array)
+    print(string_third)
+
+    string_fourth = fourth(string_array, string_length)
+    print(string_fourth)
+
+    string_fifth = fifth(string_array, string_length)
+    print(string_fifth)
+
+    string_sixth = sixth(string_array, string_length)
+    print(string_sixth)
+
+    string_seventh = seventh(string_array)
+    print(string_seventh)
+
+    string_eigth = eigth(string, string_length)
+    print(string_eigth)
+
+    print(string_length)
+
+
+if __name__ == '__main__':
+    def main():
+
+        string = "Абракадабра"
+        result_output(string)
+
+
+main()
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+</body>
+</html>
